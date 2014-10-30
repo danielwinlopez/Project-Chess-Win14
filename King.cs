@@ -8,9 +8,9 @@ namespace chessgame
 {
     public class King : ChessPiece
     {
-        public King(Position StartPos)
+        public King(Position startPos)
         {
-            StartPosition = StartPos;
+            StartPosition = startPos;
         }
 
         public override void Draw()
