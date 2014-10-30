@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace chessgame
 {
-    public class Move
+    class GameBrain
     {
-        //The logic for the moves
+       // a place where we can construct our list and then call on them from Main
     }
 }

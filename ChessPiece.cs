@@ -47,10 +47,10 @@ namespace chessgame
             Moved = piece.Moved;
             PieceValue = piece.PieceValue;
 
-            if (piece.ValidMoves != null)
-            {
-                LastValidMoveCount = piece.ValidMoves.Count;
-            }
+            //if (piece.ValidMoves != null)
+            //{
+            //    LastValidMoveCount = piece.ValidMoves.Count;
+            //}
         }
 
         internal ChessPiece(ChessPieceType chessPieceType, ChessPieceColor chessPieceColor)
@@ -67,7 +67,7 @@ namespace chessgame
 
         }
 
-        private int CalculatePieceValue(ChessPieceType pieceType)
+        public int CalculatePieceValue(ChessPieceType pieceType)
         {
             switch (pieceType)
             {
@@ -95,7 +95,9 @@ namespace chessgame
                 {
                     return 100;
                 }
+                default:
 
+                    return 0;
             }
             
         }
