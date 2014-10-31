@@ -8,5 +8,6 @@ namespace chessgame
 {
     public class Move
     {
+        //The logic for the moves
     }
 }
