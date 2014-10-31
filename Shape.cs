@@ -10,8 +10,5 @@ namespace chessgame
     {
         protected Position StartPosition;
 
-        public virtual void Draw()
-        {
-        }
     }
 }

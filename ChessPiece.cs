@@ -25,32 +25,35 @@ namespace chessgame
         {
 
         }
-        public enum ChessPieceColor
+
+        
+        public enum ChessPieceColor //enum för lagfärger
         {
             White,
             Black
         }
-        public enum ChessPieceType
+        public enum ChessPieceType // enum för speltyper
         {
             King,
             Queen,
             Rook,
             Bishop,
             Knight,
-            Pawn        
+            Pawn       
+        
         }
 
-        internal  ChessPiece(ChessPiece piece)
+        internal  ChessPiece(ChessPiece piece) // konstruktor 
         {
             PieceColor = piece.PieceColor;
             PieceType = piece.PieceType;
             Moved = piece.Moved;
             PieceValue = piece.PieceValue;
 
-            if (piece.ValidMoves != null)
-            {
-                LastValidMoveCount = piece.ValidMoves.Count;
-            }
+            //if (piece.ValidMoves != null)
+            //{
+            //    LastValidMoveCount = piece.ValidMoves.Count;
+            //}
         }
 
         internal ChessPiece(ChessPieceType chessPieceType, ChessPieceColor chessPieceColor)
@@ -58,7 +61,6 @@ namespace chessgame
             PieceType = chessPieceType;
             PieceColor = chessPieceColor;
             ValidMoves = new Stack<byte>();
-
             PieceValue = CalculatePieceValue(PieceType);
         }
 
@@ -67,7 +69,7 @@ namespace chessgame
 
         }
 
-        private int CalculatePieceValue(ChessPieceType pieceType)
+        internal int CalculatePieceValue(ChessPieceType pieceType)
         {
             switch (pieceType)
             {
@@ -95,12 +97,13 @@ namespace chessgame
                 {
                     return 100;
                 }
-
+                default:
+                    return 0;
             }
             
         }
 
-        private int CalculatePieceActionValue(ChessPieceType pieceType)
+        public int CalculatePieceActionValue(ChessPieceType pieceType)
         {
             switch (pieceType)
             {
@@ -126,12 +129,13 @@ namespace chessgame
                     }
                 case ChessPieceType.King:
                     {
-                        return 1;
+                        return 2;
                     }
                 default:
                     {
                         return 0;
                     }
+
             }
             
         }

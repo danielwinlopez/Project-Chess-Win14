@@ -14,7 +14,7 @@ namespace chessgame
             StartPosition = StartPos;
             this.Length = Length;
         }
-        public override void Draw()
+        public  void Draw()
         {
             int startX = StartPosition.X;
             int startY = StartPosition.Y;
