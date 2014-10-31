@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Bishop.cs" />
     <Compile Include="ChessPiece.cs" />
+    <Compile Include="PieceFactory.cs" />
     <Compile Include="PlayerBlack.cs" />
     <Compile Include="Board.cs" />
     <Compile Include="GameBrain.cs" />

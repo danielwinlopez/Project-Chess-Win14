@@ -9,32 +9,33 @@ namespace chessgame
     public class PieceFactory
     {
        // a place where we can construct our list and then call on them from Main
-        public List<ChessPiece> PlayerList()
+        public List<string> PlayerList()
         {
             List<ChessPiece> collection = new List<ChessPiece>();
-            collection.Add(new Pawn("P1"));
-            collection.Add(new Pawn("P2"));
-            collection.Add(new Pawn("P3"));
-            collection.Add(new Pawn("P4"));
-            collection.Add(new Pawn("P5"));
-            collection.Add(new Pawn("P6"));
-            collection.Add(new Pawn("P7"));
-            collection.Add(new Pawn("P8"));
-            collection.Add(new Bishop("B1"));
-            collection.Add(new Bishop("B2"));
-            collection.Add(new Rook("R1"));
-            collection.Add(new Rook("R2"));
-            collection.Add(new Knight("k1"));
-            collection.Add(new Knight("k2"));
-            collection.Add(new Queen("Q"));
-            collection.Add(new King("K"));
+
+            collection.Add(new Pawn(new Position(1, 0), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
+            collection.Add(new Pawn(new Position(1, 1), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
+            collection.Add(new Pawn(new Position(1, 2), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
+            collection.Add(new Pawn(new Position(1, 3), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
+            collection.Add(new Pawn(new Position(1, 4), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
+            collection.Add(new Pawn(new Position(1, 5), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
+            collection.Add(new Pawn(new Position(1, 6), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
+            collection.Add(new Pawn(new Position(1, 7), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
+            collection.Add(new Bishop(new Position(2,0)));
+            collection.Add(new Bishop(new Position(5,0)));
+            collection.Add(new Rook(new Position(0,0)));
+            collection.Add(new Rook(new Position(7,0)));
+            collection.Add(new Knight(new Position(1,0)));
+            collection.Add(new Knight(new Position(6,0)));
+            collection.Add(new Queen(new Position(4,0)));
+            collection.Add(new King(new Position(3,0)));
             
-            List<ChessPiece> startcollection = new List<ChessPiece>();
-            foreach (var item in collection)
+            List<string> startcollection = new List<string>();
+            foreach (ChessPiece item in collection)
             {
-                for (int i = 0; i < collection.Count; i++)
+                for (int i = 0; i < 1; i++)
                 {
-                    startcollection.Add(item); 
+                    startcollection.Add(item.ToString()); 
                 }
                 
             }
