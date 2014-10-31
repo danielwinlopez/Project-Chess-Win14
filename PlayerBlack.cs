@@ -10,20 +10,20 @@ namespace chessgame
     {
 
 
-        public PlayerBlack(string playerBlack) : base(playerBlack)
+        public PlayerBlack() : base("black player")
         {
         }
 
-        public List<string> showPieces()
+        public void ShowPieces()
         {
             List<string> test = new List<string>();
 
             for (int i = 0; i < 6; i++)
             {
-                test.Add(((ChessPiece.ChessPieceType) i).ToString());
+                test.Add(((ChessPieceType.ChessPieceTypes) i).ToString());
                 
             }
-            return test;
+            
             
         }
 

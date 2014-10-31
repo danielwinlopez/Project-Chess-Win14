@@ -8,8 +8,9 @@ namespace chessgame
 {
     public class Pawn : ChessPiece
     {
-        public Pawn(Position startPos,ChessPieceType pieceType ,ChessPieceColor color)
+        public Pawn(Position startPos,ChessPieceType.ChessPieceTypes pieceType ,ChessPieceColor.ChessPieceColors color)
         {
+            name = pieceType.ToString();
             StartPosition = startPos;
             PieceType = pieceType;
             PieceColor = color;

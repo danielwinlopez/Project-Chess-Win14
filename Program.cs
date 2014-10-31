@@ -11,17 +11,22 @@ namespace chessgame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("              This is Chess\r\n (created by Roje, Tobias and Daniél)");
-            Console.WriteLine(" Want to try it out? \r\n \r\n [Y]es / [N]o");
-            string line = Console.ReadLine();
-            PlayerBlack bPlayer = new PlayerBlack("Black Player");
-            PlayerWhite wPlayer = new PlayerWhite("White Player");
+            PieceFactory newPiece = new PieceFactory();
+            PlayerBlack bPlayer = new PlayerBlack();
+            PlayerWhite wPlayer = new PlayerWhite();
 
+            newPiece.TimesInList(newPiece.PlayerList());
 
-            bPlayer.TimesInList(bPlayer.showPieces());
-
-           
+            Console.WriteLine();
             
+
+            Console.ReadKey();
+            
+            Console.WriteLine("              This is Chess\r\n (created by Roje, Tobias and Daniél)");
+            Console.Write(" Want to try it out? \r\n \r\n [Y]es / [N]o : ");
+            string line = Console.ReadLine();
+            
+               
             Console.ReadLine();
 
             while (true) 

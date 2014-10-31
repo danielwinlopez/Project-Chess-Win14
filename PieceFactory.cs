@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,16 +14,16 @@ namespace chessgame
        // a place where we can construct our list and then call on them from Main
         public List<string> PlayerList()
         {
-            List<ChessPiece> collection = new List<ChessPiece>();
+            var collection = new List<ChessPiece>();
 
-            collection.Add(new Pawn(new Position(1, 0), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
-            collection.Add(new Pawn(new Position(1, 1), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
-            collection.Add(new Pawn(new Position(1, 2), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
-            collection.Add(new Pawn(new Position(1, 3), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
-            collection.Add(new Pawn(new Position(1, 4), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
-            collection.Add(new Pawn(new Position(1, 5), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
-            collection.Add(new Pawn(new Position(1, 6), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
-            collection.Add(new Pawn(new Position(1, 7), ChessPiece.ChessPieceType.Pawn, ChessPiece.ChessPieceColor.Black));
+            collection.Add(new Pawn(new Position(1, 0), ChessPieceType.ChessPieceTypes.Pawn, ChessPieceColor.ChessPieceColors.Black));
+            collection.Add(new Pawn(new Position(1, 1), ChessPieceType.ChessPieceTypes.Pawn, ChessPieceColor.ChessPieceColors.Black));
+            collection.Add(new Pawn(new Position(1, 2), ChessPieceType.ChessPieceTypes.Pawn, ChessPieceColor.ChessPieceColors.Black));
+            collection.Add(new Pawn(new Position(1, 3), ChessPieceType.ChessPieceTypes.Pawn, ChessPieceColor.ChessPieceColors.Black));
+            collection.Add(new Pawn(new Position(1, 4), ChessPieceType.ChessPieceTypes.Pawn, ChessPieceColor.ChessPieceColors.Black));
+            collection.Add(new Pawn(new Position(1, 5), ChessPieceType.ChessPieceTypes.Pawn, ChessPieceColor.ChessPieceColors.Black));
+            collection.Add(new Pawn(new Position(1, 6), ChessPieceType.ChessPieceTypes.Pawn, ChessPieceColor.ChessPieceColors.Black));
+            collection.Add(new Pawn(new Position(1, 7), ChessPieceType.ChessPieceTypes.Pawn, ChessPieceColor.ChessPieceColors.Black));
             collection.Add(new Bishop(new Position(2,0)));
             collection.Add(new Bishop(new Position(5,0)));
             collection.Add(new Rook(new Position(0,0)));
@@ -29,18 +32,32 @@ namespace chessgame
             collection.Add(new Knight(new Position(6,0)));
             collection.Add(new Queen(new Position(4,0)));
             collection.Add(new King(new Position(3,0)));
+
+            var startcollection = new List<string>();
             
-            List<string> startcollection = new List<string>();
-            foreach (ChessPiece item in collection)
-            {
-                for (int i = 0; i < 1; i++)
-                {
-                    startcollection.Add(item.ToString()); 
-                }
-                
+            foreach (var item in collection)
+            {               
+                startcollection.Add(item.ToString());             
             }
+
             return startcollection;
-        } 
+        }
+
+        public List<string> TimesInList(List<string> list)
+        {
+            var number = list.GroupBy(x => x);
+            List<string> newList = new List<string>();
+
+            foreach (var item in number)
+            {
+                string[] stringArray = (item.Key).Split(new char[] {'.'});
+                Console.WriteLine("{0} X {1} ",stringArray[1],  item.Count());                
+            }
+
+            return newList;
+        }
+
+
         
         
     }

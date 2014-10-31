@@ -8,7 +8,7 @@ namespace chessgame
 {
     class PlayerWhite : Player
     {
-        public PlayerWhite(string name) : base(name)
+        public PlayerWhite() : base("White player")
         {
         }
 
@@ -18,7 +18,7 @@ namespace chessgame
 
             for (int i = 0; i < 6; i++)
             {
-                test.Add(((ChessPiece.ChessPieceType)i).ToString());
+                test.Add(((ChessPieceType.ChessPieceTypes)i).ToString());
 
             }
             return test;
