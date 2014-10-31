@@ -42,9 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bishop.cs" />
+    <Compile Include="ChessPiece.cs" />
     <Compile Include="PlayerBlack.cs" />
     <Compile Include="Board.cs" />
-    <Compile Include="ChessPiece.cs" />
     <Compile Include="GameBrain.cs" />
     <Compile Include="King.cs" />
     <Compile Include="Knight.cs" />

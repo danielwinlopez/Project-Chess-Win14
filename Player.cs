@@ -8,16 +8,16 @@ namespace chessgame
 {
     public class Player
     {
-<<<<<<< HEAD
+
 
         private string teamColor;
         List<ChessPiece> pieces = new List<ChessPiece>();
 
-=======
+
         private string name;
 
         // Property to keep track on the amount of pieces the player got left
->>>>>>> origin/master
+
         public byte PiecesAmount { get; set; }
 
         public Player(string color)
