@@ -8,9 +8,17 @@ namespace chessgame
 {
     class Bishop : ChessPiece
     {
+        private string B;
+
         public Bishop(Position startPos)
         {
             StartPosition = startPos;
+        }
+
+        public Bishop(string b)
+        {
+            // TODO: Complete member initialization
+            this.B = b;
         }
 
         public override void Draw()

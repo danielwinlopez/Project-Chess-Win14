@@ -8,9 +8,17 @@ namespace chessgame
 {
     public class Pawn : ChessPiece
     {
+        private string P;
+
         public Pawn(Position startPos)
         {
             StartPosition = startPos;
+        }
+
+        public Pawn(string p)
+        {
+            // TODO: Complete member initialization
+            this.P = p;
         }
         public override void Draw()
         {
