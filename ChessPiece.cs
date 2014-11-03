@@ -60,7 +60,11 @@ namespace chessgame
 
         }
 
+<<<<<<< HEAD
         internal int CalculatePieceValue(ChessPieceType.ChessPieceTypes pieceType)
+=======
+        public int CalculatePieceValue(ChessPieceType pieceType)
+>>>>>>> origin/master
         {
             switch (pieceType)
             {
@@ -89,6 +93,10 @@ namespace chessgame
                     return 100;
                 }
                 default:
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
                     return 0;
             }
 

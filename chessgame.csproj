@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bishop.cs" />
+    <Compile Include="Board.cs" />
     <Compile Include="ChessPiece.cs" />
     <Compile Include="ChessPieceColor.cs" />
     <Compile Include="ChessPieceType.cs" />
