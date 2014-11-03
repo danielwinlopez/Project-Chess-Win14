@@ -10,9 +10,9 @@ namespace chessgame
     {
         public Pawn(Position startPos,ChessPieceType pieceType )
         {
-            name = pieceType.ToString();            
-            PieceType = pieceType;
+            name = pieceType.ToString();
             StartPosition = startPos;
+            PieceType = pieceType;
         }
         public override void Draw()
         {

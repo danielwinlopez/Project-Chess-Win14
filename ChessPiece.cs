@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace chessgame
 {
-
     public abstract class ChessPiece : Move
     {
         internal string name;
@@ -26,15 +25,8 @@ namespace chessgame
         {
 
         }
-
-
-
-
-
-
         internal ChessPiece(ChessPiece piece) // konstruktor 
         {
-
             PieceColor = piece.PieceColor;
             PieceType = piece.PieceType;
             Moved = piece.Moved;
@@ -48,19 +40,15 @@ namespace chessgame
 
         internal ChessPiece(ChessPieceType.ChessPieceTypes chessPieceType, TeamColor.Color chessPieceColor)
         {
-
             PieceType = chessPieceType;
             PieceColor = chessPieceColor;
             ValidMoves = new Stack<byte>();
             PieceValue = CalculatePieceValue(PieceType);
         }
-
         internal ChessPiece()
         {
 
         }
-
-
         internal int CalculatePieceValue(ChessPieceType.ChessPieceTypes pieceType)
 
         {
@@ -96,7 +84,6 @@ namespace chessgame
             }
 
         }
-
         public int CalculatePieceActionValue(ChessPieceType.ChessPieceTypes pieceType)
         {
             switch (pieceType)
@@ -129,14 +116,9 @@ namespace chessgame
                 {
                     return 0;
                 }
-
             }
-
         }
-
     }
-
-
 }
     
 
