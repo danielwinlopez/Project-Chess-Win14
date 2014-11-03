@@ -8,7 +8,7 @@ namespace chessgame
 {
     class Rook : ChessPiece
     {
-        public Rook(Position startPos)
+        public Rook(Position startPos, ChessPieceType.ChessPieceTypes pieceType)
         {
             StartPosition = startPos;
         }

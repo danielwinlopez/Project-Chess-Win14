@@ -8,7 +8,7 @@ namespace chessgame
 {
     class PlayerWhite : Player
     {
-        public PlayerWhite() : base("White player")
+        public PlayerWhite() : base(TeamColor.Color.White)
         {
         }
 

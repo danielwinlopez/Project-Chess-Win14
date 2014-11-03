@@ -8,7 +8,7 @@ namespace chessgame
 {
     class Bishop : ChessPiece
     {
-        public Bishop(Position startPos)
+        public Bishop(Position startPos, ChessPieceType.ChessPieceTypes pieceType)
         {
             StartPosition = startPos;
         }

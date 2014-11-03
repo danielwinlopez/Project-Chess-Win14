@@ -8,7 +8,7 @@ namespace chessgame
 {
     class Knight : ChessPiece
     {
-        public Knight(Position startPos)
+        public Knight(Position startPos, ChessPieceType.ChessPieceTypes pieceType)
         {
             StartPosition = startPos;
         }
