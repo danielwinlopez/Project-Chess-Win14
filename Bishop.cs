@@ -11,6 +11,8 @@ namespace chessgame
         public Bishop(Position startPos, ChessPieceType.ChessPieceTypes pieceType)
         {
             StartPosition = startPos;
+            name = pieceType.ToString();
+            PieceType = pieceType;
         }
 
         public override void Draw()

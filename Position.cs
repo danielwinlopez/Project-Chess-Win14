@@ -15,5 +15,10 @@ namespace chessgame
         }
         public int X;
         public int Y;
+
+       
+
+        }
     }
+
 }

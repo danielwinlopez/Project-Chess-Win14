@@ -8,20 +8,15 @@ namespace chessgame
 {
     class PlayerWhite : Player
     {
+        PieceFactory newPieces = new PieceFactory();
+
         public PlayerWhite() : base(TeamColor.Color.White)
         {
         }
 
-        public List<string> showPieces()
+        public void showPieces()
         {
-            List<string> test = new List<string>();
-
-            for (int i = 0; i < 6; i++)
-            {
-                test.Add(((ChessPieceType.ChessPieceTypes)i).ToString());
-
-            }
-            return test;
+              newPieces.NumberOfPieces(newPieces.PlayerList());
         }
     }
 }
