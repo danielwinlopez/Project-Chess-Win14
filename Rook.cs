@@ -8,17 +8,9 @@ namespace chessgame
 {
     class Rook : ChessPiece
     {
-        private string R;
-
-        public Rook(Position startPos)
+        public Rook(Position startPos, ChessPieceType.ChessPieceTypes pieceType)
         {
             StartPosition = startPos;
-        }
-
-        public Rook(string r)
-        {
-            // TODO: Complete member initialization
-            this.R = r;
         }
 
         public override void Draw()

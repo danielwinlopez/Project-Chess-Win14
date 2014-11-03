@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace chessgame
 {
-    public abstract class Shape
+    public class TeamColor
     {
-        protected Position StartPosition;
-
+       public enum Color //enum för lagfärger
+        {
+            White,
+            Black
+        }
     }
 }

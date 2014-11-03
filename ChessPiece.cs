@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace chessgame
 {
+
     public abstract class ChessPiece : Move
     {
-        
+        internal string name;
         internal int AttackValue;
         internal int DefenceValue;
         internal int PieceValue;
@@ -16,8 +17,8 @@ namespace chessgame
         internal bool Selected;
         internal bool Moved;
         internal Stack<byte> ValidMoves;
-        internal ChessPieceColor PieceColor;
-        internal ChessPieceType PieceType;
+        internal TeamColor.Color PieceColor;
+        internal ChessPieceType.ChessPieceTypes PieceType;
         internal Position StartPosition;
 
 
@@ -25,23 +26,15 @@ namespace chessgame
         {
 
         }
-        public enum ChessPieceColor
-        {
-            White,
-            Black
-        }
-        public enum ChessPieceType
-        {
-            King,
-            Queen,
-            Rook,
-            Bishop,
-            Knight,
-            Pawn        
-        }
 
-        internal  ChessPiece(ChessPiece piece)
+
+
+
+
+
+        internal ChessPiece(ChessPiece piece) // konstruktor 
         {
+
             PieceColor = piece.PieceColor;
             PieceType = piece.PieceType;
             Moved = piece.Moved;
@@ -53,12 +46,12 @@ namespace chessgame
             //}
         }
 
-        internal ChessPiece(ChessPieceType chessPieceType, ChessPieceColor chessPieceColor)
+        internal ChessPiece(ChessPieceType.ChessPieceTypes chessPieceType, TeamColor.Color chessPieceColor)
         {
+
             PieceType = chessPieceType;
             PieceColor = chessPieceColor;
             ValidMoves = new Stack<byte>();
-
             PieceValue = CalculatePieceValue(PieceType);
         }
 
@@ -67,78 +60,88 @@ namespace chessgame
 
         }
 
+<<<<<<< HEAD
+        internal int CalculatePieceValue(ChessPieceType.ChessPieceTypes pieceType)
+=======
         public int CalculatePieceValue(ChessPieceType pieceType)
+>>>>>>> origin/master
         {
             switch (pieceType)
             {
-                case ChessPieceType.Pawn:
+                case ChessPieceType.ChessPieceTypes.Pawn:
                 {
                     return 10;
                 }
-                case ChessPieceType.Knight:
+                case ChessPieceType.ChessPieceTypes.Knight:
                 {
                     return 25;
                 }
-                case ChessPieceType.Bishop:
+                case ChessPieceType.ChessPieceTypes.Bishop:
                 {
                     return 30;
                 }
-                case ChessPieceType.Rook:
+                case ChessPieceType.ChessPieceTypes.Rook:
                 {
                     return 50;
                 }
-                case ChessPieceType.Queen:
+                case ChessPieceType.ChessPieceTypes.Queen:
                 {
                     return 80;
                 }
-                case ChessPieceType.King:
+                case ChessPieceType.ChessPieceTypes.King:
                 {
                     return 100;
                 }
                 default:
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/master
                     return 0;
             }
-            
+
         }
 
-        private int CalculatePieceActionValue(ChessPieceType pieceType)
+        public int CalculatePieceActionValue(ChessPieceType.ChessPieceTypes pieceType)
         {
             switch (pieceType)
             {
-                case ChessPieceType.Pawn:
-                    {
-                        return 10;
-                    }
-                case ChessPieceType.Knight:
-                    {
-                        return 8;
-                    }
-                case ChessPieceType.Bishop:
-                    {
-                        return 6;
-                    }
-                case ChessPieceType.Rook:
-                    {
-                        return 4;
-                    }
-                case ChessPieceType.Queen:
-                    {
-                        return 2;
-                    }
-                case ChessPieceType.King:
-                    {
-                        return 1;
-                    }
+                case ChessPieceType.ChessPieceTypes.Pawn:
+                {
+                    return 10;
+                }
+                case ChessPieceType.ChessPieceTypes.Knight:
+                {
+                    return 8;
+                }
+                case ChessPieceType.ChessPieceTypes.Bishop:
+                {
+                    return 6;
+                }
+                case ChessPieceType.ChessPieceTypes.Rook:
+                {
+                    return 4;
+                }
+                case ChessPieceType.ChessPieceTypes.Queen:
+                {
+                    return 2;
+                }
+                case ChessPieceType.ChessPieceTypes.King:
+                {
+                    return 2;
+                }
                 default:
-                    {
-                        return 0;
-                    }
+                {
+                    return 0;
+                }
+
             }
-            
+
         }
 
     }
 
 
 }
+    
+

@@ -8,17 +8,12 @@ namespace chessgame
 {
     public class Pawn : ChessPiece
     {
-        private string P;
-
-        public Pawn(Position startPos)
+        public Pawn(Position startPos,ChessPieceType.ChessPieceTypes pieceType )
         {
+            name = pieceType.ToString();
             StartPosition = startPos;
-        }
-
-        public Pawn(string p)
-        {
-            // TODO: Complete member initialization
-            this.P = p;
+            PieceType = pieceType;
+            
         }
         public override void Draw()
         {

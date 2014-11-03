@@ -8,17 +8,9 @@ namespace chessgame
 {
     class Queen : ChessPiece
     {
-        private string Q;
-
-        public Queen(Position startPos)
+        public Queen(Position startPos, ChessPieceType.ChessPieceTypes pieceType)
         {
             StartPosition = startPos;
-        }
-
-        public Queen(string q)
-        {
-            // TODO: Complete member initialization
-            this.Q = q;
         }
 
         public override void Draw()
