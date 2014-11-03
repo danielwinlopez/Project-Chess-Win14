@@ -17,10 +17,7 @@ namespace chessgame
         private string name;
 
         // Property to keep track on the amount of pieces the player got left
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         public byte PiecesAmount { get; set; }
 
         public Player(TeamColor.Color color)
