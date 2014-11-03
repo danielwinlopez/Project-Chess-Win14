@@ -20,9 +20,9 @@ namespace chessgame
 
         public byte PiecesAmount { get; set; }
 
-        public Player(string color)
+        public Player(TeamColor.Color color)
         {
-            this.teamColor = color;
+            var teamColor = color;
         }
 
 

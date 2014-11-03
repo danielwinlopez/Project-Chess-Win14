@@ -17,7 +17,7 @@ namespace chessgame
         internal bool Selected;
         internal bool Moved;
         internal Stack<byte> ValidMoves;
-        internal ChessPieceColor.ChessPieceColors PieceColor;
+        internal TeamColor.Color PieceColor;
         internal ChessPieceType.ChessPieceTypes PieceType;
         internal Position StartPosition;
 
@@ -46,7 +46,7 @@ namespace chessgame
             //}
         }
 
-        internal ChessPiece(ChessPieceType.ChessPieceTypes chessPieceType, ChessPieceColor.ChessPieceColors chessPieceColor)
+        internal ChessPiece(ChessPieceType.ChessPieceTypes chessPieceType, TeamColor.Color chessPieceColor)
         {
 
             PieceType = chessPieceType;

@@ -15,7 +15,7 @@ namespace chessgame
             PlayerBlack bPlayer = new PlayerBlack();
             PlayerWhite wPlayer = new PlayerWhite();
 
-            newPiece.TimesInList(newPiece.PlayerList());
+            newPiece.NumberOfPieces(newPiece.PlayerList());
 
             Console.WriteLine();
             
