@@ -19,25 +19,19 @@ namespace chessgame
             int startX = StartPosition.X;
             int startY = StartPosition.Y;
             Console.WriteLine(" \r\n \r\n \r\n \r\n ");
-            
+
             for (int y = startY; y < startY + Length; y++)
             {
-                
                 
                 for (int x = startX; x < startX + Length; x++)
                 {
                     if (x == startX)
                     {
                         Console.SetCursorPosition(startX, Console.CursorTop);
-                       
                     }
                     Console.Write(" [ ]");
-                    
                 }
                 Console.WriteLine(" \r\n ");
-                
-                
-                
             }
         }
     }
