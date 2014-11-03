@@ -45,7 +45,7 @@ namespace chessgame
             return startcollection;
         }
 
-        public List<string> NumberOfPieces(List<string> list)
+        public void NumberOfPieces(List<string> list)
         {
             var number = list.GroupBy(x => x);
             List<string> newList = new List<string>();
@@ -56,7 +56,7 @@ namespace chessgame
                 Console.WriteLine("{0} X {1} ",stringArray[1],  item.Count());                
             }
 
-            return newList;
+            
         }
 
 

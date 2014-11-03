@@ -11,12 +11,13 @@ namespace chessgame
     {
         static void Main(string[] args)
         {
+            Position white = new Position(6,6);
             PieceFactory newPiece = new PieceFactory();
             PlayerBlack bPlayer = new PlayerBlack();
             PlayerWhite wPlayer = new PlayerWhite();
 
-
-            newPiece.NumberOfPieces(newPiece.PlayerList());
+            //wPlayer.showPieces();
+            white.StartingPositionWhite();
 
             Console.WriteLine();
             
