@@ -17,7 +17,7 @@ namespace chessgame
             PlayerWhite wPlayer = new PlayerWhite();
 
             //wPlayer.showPieces();
-            white.StartingPositionWhite();
+            
 
             Console.WriteLine();
             
