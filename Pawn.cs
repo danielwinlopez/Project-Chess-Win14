@@ -13,7 +13,6 @@ namespace chessgame
             name = pieceType.ToString();
             StartPosition = startPos;
             PieceType = pieceType;
-            
         }
         public override void Draw()
         {
