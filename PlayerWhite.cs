@@ -10,7 +10,7 @@ namespace chessgame
     {
         PieceFactory newPieces = new PieceFactory();
 
-        public PlayerWhite() : base(TeamColor.Color.White)
+        public PlayerWhite() : base(Color.White)
         {
         }
 

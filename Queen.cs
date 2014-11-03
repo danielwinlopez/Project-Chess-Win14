@@ -8,7 +8,7 @@ namespace chessgame
 {
     class Queen : ChessPiece
     {
-        public Queen(Position startPos, ChessPieceType.ChessPieceTypes pieceType)
+        public Queen(Position startPos, ChessPieceType pieceType)
         {
             StartPosition = startPos;
             name = pieceType.ToString();

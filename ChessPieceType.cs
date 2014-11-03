@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace chessgame
 {
-    public class ChessPieceType
+
+    public enum ChessPieceType // enum för speltyper
     {
-        public enum ChessPieceTypes // enum för speltyper
-        {
-            King,
-            Queen,
-            Rook,
-            Bishop,
-            Knight,
-            Pawn
-        }
+        King,
+        Queen,
+        Rook,
+        Bishop,
+        Knight,
+        Pawn
     }
 }

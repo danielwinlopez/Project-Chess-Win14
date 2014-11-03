@@ -10,7 +10,7 @@ namespace chessgame
     {
 
 
-        public PlayerBlack() : base(TeamColor.Color.Black)
+        public PlayerBlack() : base(Color.Black)
         {
         }
 

@@ -18,7 +18,7 @@ namespace chessgame
         internal bool Moved;
         internal Stack<byte> ValidMoves;
         internal TeamColor.Color PieceColor;
-        internal ChessPieceType.ChessPieceTypes PieceType;
+        internal ChessPieceType PieceType;
         internal Position StartPosition;
 
 

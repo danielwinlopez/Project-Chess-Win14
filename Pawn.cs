@@ -8,7 +8,7 @@ namespace chessgame
 {
     public class Pawn : ChessPiece
     {
-        public Pawn(Position startPos,ChessPieceType.ChessPieceTypes pieceType )
+        public Pawn(Position startPos,ChessPieceType pieceType )
         {
             name = pieceType.ToString();            
             PieceType = pieceType;

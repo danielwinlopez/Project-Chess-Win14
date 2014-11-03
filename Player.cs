@@ -18,14 +18,10 @@ namespace chessgame
 
         // Property to keep track on the amount of pieces the player got left
 
-        public byte PiecesAmount { get; set; }
-
-        public Player(TeamColor.Color color)
+        public Player(Color color)
         {
             var teamColor = color;
         }
-
-
 
         public List<string> ChessPieceList(List< string> pieceType)
         {
