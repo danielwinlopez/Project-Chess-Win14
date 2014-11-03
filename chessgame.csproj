@@ -48,7 +48,7 @@
     <Compile Include="ChessPieceType.cs" />
     <Compile Include="PieceFactory.cs" />
     <Compile Include="PlayerBlack.cs" />
-    <Compile Include="Board.cs" />
+    <Compile Include="GameBrain.cs" />
     <Compile Include="King.cs" />
     <Compile Include="Knight.cs" />
     <Compile Include="Move.cs" />
