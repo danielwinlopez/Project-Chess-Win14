@@ -83,7 +83,6 @@ namespace chessgame
             }
             return newList;
         }
-
         //public List<string> KillPiece(List<string> list)
         //{
         //    List<string> newList = new List<string>();

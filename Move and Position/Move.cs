@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace chessgame
 {
-    public class Position
+    public class Move
     {
-        public Position(int x, int y)
+        public void LegalMoves(int x, int y)
         {
-            X = x;
-            Y = y;
+           
         }
-        public int X;
-        public int Y;
 
-       
-
-        }
+        //The logic for the moves
     }
-
-
+}

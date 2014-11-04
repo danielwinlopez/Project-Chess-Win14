@@ -8,8 +8,6 @@ namespace chessgame
 {
     public class Player
     {
-
-
         private readonly Color teamColor;
         List<string> pieces = new List<string>();
         private string name;
@@ -43,8 +41,6 @@ namespace chessgame
             {
                 return newPieces.NumberOfPieces(newPieces.WhitePlayerList());
             }
-            
         }
-       
     }
 }

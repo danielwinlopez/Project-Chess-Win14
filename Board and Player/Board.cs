@@ -19,10 +19,6 @@ namespace chessgame
         public void Draw()
         {
  
-            
-
-
-
         }
     }
 }

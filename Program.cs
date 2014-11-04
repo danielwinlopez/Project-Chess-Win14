@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace chessgame
-{
+{    
     class Program
     {
         static void Main(string[] args)
@@ -25,12 +25,7 @@ namespace chessgame
             wPlayer.ShowPieces();
             Console.WriteLine();
 
-
-
-
             Console.ReadLine();
         }
-
-        
     }
 }

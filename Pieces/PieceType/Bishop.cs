@@ -52,7 +52,6 @@ namespace chessgame
         };
 
          */
-
         public override void Draw()
         {
             int startX = StartPosition.X;

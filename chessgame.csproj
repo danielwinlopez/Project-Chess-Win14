@@ -41,27 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bishop.cs" />
-    <Compile Include="Board.cs" />
-    <Compile Include="ChessPiece.cs" />
-    <Compile Include="ChessPieceColor.cs" />
-    <Compile Include="ChessPieceType.cs" />
-    <Compile Include="PieceFactory.cs" />
-    <Compile Include="King.cs" />
-    <Compile Include="Knight.cs" />
-    <Compile Include="Move.cs" />
-    <Compile Include="Pawn.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Position.cs" />
+    <Compile Include="Pieces\PieceType\Bishop.cs" />
+    <Compile Include="Board and Player\Board.cs" />
+    <Compile Include="Pieces\ChessPiece.cs" />
+    <Compile Include="Pieces\ChessPieceColor.cs" />
+    <Compile Include="Pieces\ChessPieceType.cs" />
+    <Compile Include="Pieces\PieceFactory.cs" />
+    <Compile Include="Pieces\PieceType\King.cs" />
+    <Compile Include="Pieces\PieceType\Knight.cs" />
+    <Compile Include="Move and Position\Move.cs" />
+    <Compile Include="Pieces\PieceType\Pawn.cs" />
+    <Compile Include="Board and Player\Player.cs" />
+    <Compile Include="Move and Position\Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queen.cs" />
-    <Compile Include="Rook.cs" />
-    <Compile Include="Shape.cs" />
+    <Compile Include="Pieces\PieceType\Queen.cs" />
+    <Compile Include="Pieces\PieceType\Rook.cs" />
+    <Compile Include="Board and Player\Shape.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace chessgame
 {
-    public class Move
+    public enum ChessPieceType // enum för speltyper
     {
-
-        public void LegalMoves(int x, int y)
-        {
-           
-        }
-
-        //The logic for the moves
+        King,
+        Queen,
+        Rook,
+        Bishop,
+        Knight,
+        Pawn
     }
 }

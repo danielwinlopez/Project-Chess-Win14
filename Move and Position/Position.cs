@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace chessgame
 {
-
-       public enum Color //enum för lagfärger
+    public class Position
+    {
+        public Position(int x, int y)
         {
-            White,
-            Black
+            X = x;
+            Y = y;
         }
-
+        public int X;
+        public int Y;
+    }
 }
+
+
