@@ -46,22 +46,22 @@ namespace chessgame
         {
             var pieceListBlack = new List<ChessPiece>
             {
-                new Pawn(new Position(7, 0), ChessPieceType.ChessPieceTypes.Pawn),
-                new Pawn(new Position(7, 1), ChessPieceType.ChessPieceTypes.Pawn),
-                new Pawn(new Position(7, 2), ChessPieceType.ChessPieceTypes.Pawn),
-                new Pawn(new Position(7, 3), ChessPieceType.ChessPieceTypes.Pawn),
-                new Pawn(new Position(7, 4), ChessPieceType.ChessPieceTypes.Pawn),
-                new Pawn(new Position(7, 5), ChessPieceType.ChessPieceTypes.Pawn),
-                new Pawn(new Position(7, 6), ChessPieceType.ChessPieceTypes.Pawn),
-                new Pawn(new Position(7, 7), ChessPieceType.ChessPieceTypes.Pawn),
-                new Bishop(new Position(2, 8), ChessPieceType.ChessPieceTypes.Bishop),
-                new Bishop(new Position(5, 8), ChessPieceType.ChessPieceTypes.Bishop),
-                new Rook(new Position(0, 8), ChessPieceType.ChessPieceTypes.Rook),
-                new Rook(new Position(7, 8), ChessPieceType.ChessPieceTypes.Rook),
-                new Knight(new Position(1, 8), ChessPieceType.ChessPieceTypes.Knight),
-                new Knight(new Position(6, 8), ChessPieceType.ChessPieceTypes.Knight),
-                new Queen(new Position(3, 8), ChessPieceType.ChessPieceTypes.Queen),
-                new King(new Position(4, 8) , ChessPieceType.ChessPieceTypes.King)
+                new Pawn(new Position(7, 0), ChessPieceType.Pawn),
+                new Pawn(new Position(7, 1), ChessPieceType.Pawn),
+                new Pawn(new Position(7, 2), ChessPieceType.Pawn),
+                new Pawn(new Position(7, 3), ChessPieceType.Pawn),
+                new Pawn(new Position(7, 4), ChessPieceType.Pawn),
+                new Pawn(new Position(7, 5), ChessPieceType.Pawn),
+                new Pawn(new Position(7, 6), ChessPieceType.Pawn),
+                new Pawn(new Position(7, 7), ChessPieceType.Pawn),
+                new Bishop(new Position(2, 8), ChessPieceType.Bishop),
+                new Bishop(new Position(5, 8), ChessPieceType.Bishop),
+                new Rook(new Position(0, 8), ChessPieceType.Rook),
+                new Rook(new Position(7, 8), ChessPieceType.Rook),
+                new Knight(new Position(1, 8), ChessPieceType.Knight),
+                new Knight(new Position(6, 8), ChessPieceType.Knight),
+                new Queen(new Position(3, 8), ChessPieceType.Queen),
+                new King(new Position(4, 8) , ChessPieceType.King)
             };
             var startcollection = new List<string>();
 
@@ -83,5 +83,19 @@ namespace chessgame
             }
             return newList;
         }
+
+        //public List<string> KillPiece(List<string> list)
+        //{
+        //    List<string> newList = new List<string>();
+        //    foreach (var item in list)
+        //    {
+        //        newList.Add(item);
+        //    }
+        //    for (int i = 0; i < newList.Count; i++)
+        //    {
+        //        newList.RemoveAt(4);
+        //    }
+        //    return newList;
+        //}
     }
 }
