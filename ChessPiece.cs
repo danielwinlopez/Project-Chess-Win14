@@ -16,10 +16,10 @@ namespace chessgame
         internal bool Selected;
         internal bool Moved;
         internal Stack<byte> ValidMoves;
-        internal TeamColor.Color PieceColor;
+        internal Color PieceColor;
         internal ChessPieceType PieceType;
         internal Position StartPosition;
-
+        public static ChessPiece ChessPiecesPiece { get; set; }
 
         public virtual void Draw()
         {
@@ -38,10 +38,10 @@ namespace chessgame
             //}
         }
 
-        internal ChessPiece(ChessPieceType.ChessPieceTypes chessPieceType, TeamColor.Color chessPieceColor)
+        internal ChessPiece(ChessPieceType chessPieceType, Color teamColor)
         {
             PieceType = chessPieceType;
-            PieceColor = chessPieceColor;
+            PieceColor = teamColor;
             ValidMoves = new Stack<byte>();
             PieceValue = CalculatePieceValue(PieceType);
         }
@@ -49,32 +49,32 @@ namespace chessgame
         {
 
         }
-        internal int CalculatePieceValue(ChessPieceType.ChessPieceTypes pieceType)
+        internal int CalculatePieceValue(ChessPieceType pieceType)
 
         {
             switch (pieceType)
             {
-                case ChessPieceType.ChessPieceTypes.Pawn:
+                case ChessPieceType.Pawn:
                 {
                     return 10;
                 }
-                case ChessPieceType.ChessPieceTypes.Knight:
+                case ChessPieceType.Knight:
                 {
                     return 25;
                 }
-                case ChessPieceType.ChessPieceTypes.Bishop:
+                case ChessPieceType.Bishop:
                 {
                     return 30;
                 }
-                case ChessPieceType.ChessPieceTypes.Rook:
+                case ChessPieceType.Rook:
                 {
                     return 50;
                 }
-                case ChessPieceType.ChessPieceTypes.Queen:
+                case ChessPieceType.Queen:
                 {
                     return 80;
                 }
-                case ChessPieceType.ChessPieceTypes.King:
+                case ChessPieceType.King:
                 {
                     return 100;
                 }
@@ -84,31 +84,31 @@ namespace chessgame
             }
 
         }
-        public int CalculatePieceActionValue(ChessPieceType.ChessPieceTypes pieceType)
+        public int CalculatePieceActionValue(ChessPieceType pieceType)
         {
             switch (pieceType)
             {
-                case ChessPieceType.ChessPieceTypes.Pawn:
+                case ChessPieceType.Pawn:
                 {
                     return 10;
                 }
-                case ChessPieceType.ChessPieceTypes.Knight:
+                case ChessPieceType.Knight:
                 {
                     return 8;
                 }
-                case ChessPieceType.ChessPieceTypes.Bishop:
+                case ChessPieceType.Bishop:
                 {
                     return 6;
                 }
-                case ChessPieceType.ChessPieceTypes.Rook:
+                case ChessPieceType.Rook:
                 {
                     return 4;
                 }
-                case ChessPieceType.ChessPieceTypes.Queen:
+                case ChessPieceType.Queen:
                 {
                     return 2;
                 }
-                case ChessPieceType.ChessPieceTypes.King:
+                case ChessPieceType.King:
                 {
                     return 2;
                 }

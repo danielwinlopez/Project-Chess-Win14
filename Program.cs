@@ -13,47 +13,24 @@ namespace chessgame
         {
             Position white = new Position(6,6);
             PieceFactory newPiece = new PieceFactory();
-            PlayerBlack bPlayer = new PlayerBlack();
-            PlayerWhite wPlayer = new PlayerWhite();
+            Player wPlayer = new Player(Color.White);
+            Player bPlayer = new Player(Color.Black);
+            Board board = new Board(new Position(8,8),8);
+            Position newPosition = new Position(0,0);
 
-            //wPlayer.showPieces();
-            
-
+            Console.WriteLine("BLACK PLAYER: \r\n-------------");
+            bPlayer.ShowPieces();
             Console.WriteLine();
-            
+            Console.WriteLine("WHITE PLAYER: \r\n-------------");
+            wPlayer.ShowPieces();
+            Console.WriteLine();
 
-            Console.ReadKey();
-            
-            Console.WriteLine("              This is Chess\r\n (created by Roje, Tobias and Daniél)");
-            Console.Write(" Want to try it out? \r\n \r\n [Y]es / [N]o : ");
-            string line = Console.ReadLine();
-            
-               
-            Console.ReadLine();
 
-            while (true) 
-            {
-                Console.Clear();
-                if (line == "Y" || line == "y") 
-                {
-                    Board GB = new Board(new Position(5, 5), 8);
-                    
-                    List<Shape> sl = new List<Shape>();
-                    sl.Add(GB);
-
-                    GB.Draw();
-
-                    
-                 }
-                else
-                {
-                    break;
-                }
-                Console.ReadLine();
-            }
 
 
             Console.ReadLine();
         }
+
+        
     }
 }

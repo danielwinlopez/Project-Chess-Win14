@@ -47,7 +47,6 @@
     <Compile Include="ChessPieceColor.cs" />
     <Compile Include="ChessPieceType.cs" />
     <Compile Include="PieceFactory.cs" />
-    <Compile Include="PlayerBlack.cs" />
     <Compile Include="King.cs" />
     <Compile Include="Knight.cs" />
     <Compile Include="Move.cs" />
@@ -59,7 +58,6 @@
     <Compile Include="Queen.cs" />
     <Compile Include="Rook.cs" />
     <Compile Include="Shape.cs" />
-    <Compile Include="PlayerWhite.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
