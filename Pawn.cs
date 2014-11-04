@@ -14,6 +14,11 @@ namespace chessgame
             StartPosition = startPos;
             PieceType = pieceType;
         }
+
+        public List<Position> possibleMove = new List<Position>(
+        {
+            new Position(0,1)
+        }; 
         public override void Draw()
         {
             int startX = StartPosition.X;

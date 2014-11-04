@@ -14,6 +14,44 @@ namespace chessgame
             name = pieceType.ToString();
             PieceType = pieceType;
         }
+        /* VET INTE OM DETTA ÄR OPTIMALT (ELLER ENS FUNGERAR ATT ANVÄNDA)
+        public List<Position> possibleMove = new List<Position>
+        {
+            new Position(1, 1),
+            new Position(2, 2),
+            new Position(3, 3),
+            new Position(4, 4),
+            new Position(5, 5),
+            new Position(6, 6),
+            new Position(7, 7),
+            new Position(8, 8),
+            new Position(1, -1),
+            new Position(2, -2),
+            new Position(3, -3),
+            new Position(4, -4),
+            new Position(5, -5),
+            new Position(6, -6),
+            new Position(7, -7),
+            new Position(8, -8),
+            new Position(-1, -1),
+            new Position(-2, -2),
+            new Position(-3, -3),
+            new Position(-4, -4),
+            new Position(-5, -5),
+            new Position(-6, -6),
+            new Position(-7, -7),
+            new Position(-8, -8),
+            new Position(-1, -1),
+            new Position(-2, -2),
+            new Position(-3, -3),
+            new Position(-4, -4),
+            new Position(-5, -5),
+            new Position(-6, -6),
+            new Position(-7, -7),
+            new Position(-8, -8),
+        };
+
+         */
 
         public override void Draw()
         {
