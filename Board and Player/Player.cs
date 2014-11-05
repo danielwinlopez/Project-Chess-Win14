@@ -12,7 +12,6 @@ namespace chessgame
         List<string> pieces = new List<string>();
         private string name;
         PieceFactory newPieces = new PieceFactory();
-        // Property to keep track on the amount of pieces the player got left
 
         public byte PiecesAmount { get; set; }
 
@@ -20,7 +19,6 @@ namespace chessgame
         {
             teamColor = color;
         }
-
         public List<string> ChessPieceList(List<string> pieceType)
         {
             pieces = new List<string>();
@@ -28,7 +26,6 @@ namespace chessgame
             {
                 pieces.Add(item);
             }
-
             return pieces;
         }
         public List<ChessPiece> ShowPieces() // lista till varje lag

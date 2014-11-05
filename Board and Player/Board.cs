@@ -10,17 +10,18 @@ namespace chessgame
     public class Board
     {
         private PieceFactory pieceFactory;
-        private List<ChessPiece> allaPjasorna;
+        private List<ChessPiece> allaPjasorna = new List<ChessPiece>(); 
         public Board()
         {
             pieceFactory = new PieceFactory();
-            allaPjasorna = pieceFactory.WhitePlayerList();
-            PrintWhite();
+            allaPjasorna.AddRange(pieceFactory.WhitePlayerList());
+            allaPjasorna.AddRange(pieceFactory.BlackPlayerList());
 
+            PrintAll();
         }
         private int[,] chessBoard = new int[8, 8];
 
-        public void PrintWhite()
+        public void PrintAll()
         {
             foreach (var item in allaPjasorna)
             {
@@ -29,7 +30,6 @@ namespace chessgame
                     item.Position.Y);
             }
         }
-
         public void PrintBoard(int[,] arr)
         {
             for (int y = 7; y >= 0; y--)
@@ -49,7 +49,5 @@ namespace chessgame
                 Console.WriteLine();
             }
         }
-
     }
-
 }
