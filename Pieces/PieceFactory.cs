@@ -6,15 +6,11 @@ namespace chessgame
 {
     public class PieceFactory
     {
-       // a place where we can construct our list and then call on them from Main
+       // a place where we can construct our list´s and then call on them from Main
         public List<ChessPiece> Wplayer { get; set; }
         public List<ChessPiece> WhitePlayerList()
         {
-            //foreach (var chessPiece in Wplayer)
-            //{
-            //    Wplayer.Add(new Pawn(new Position(), ));
-            //}
-            
+            // Whiteplayer´s list is made here
             return new List<ChessPiece>
             {
                 Pawn.CreatePawn(1, 0),
@@ -37,6 +33,7 @@ namespace chessgame
         }
         public List<ChessPiece> BlackPlayerList()
         {
+            // Blackplayer´s list is made here
             return new List<ChessPiece>
             {
                 Pawn.CreatePawn(7, 0),
@@ -57,30 +54,5 @@ namespace chessgame
                 King.CreateKing(4, 8)                    
             };
         }
-        //public List<ChessPiece> NumberOfPieces(List<ChessPiece> list)
-        //{
-        //    var number = list.GroupBy(x => x);
-        //    List<ChessPiece> newList = new List<ChessPiece>();
-
-        //    foreach (var item in number)
-        //    {
-        //        string[] stringArray = (item.Key).Split(new char[] {'.'});
-        //        Console.WriteLine("{0} X {1} ",stringArray[1],  item.Count());                
-        //    }
-        //    return newList;
-        //}
-        //public List<string> KillPiece(List<string> list)
-        //{
-        //    List<string> newList = new List<string>();
-        //    foreach (var item in list)
-        //    {
-        //        newList.Add(item);
-        //    }
-        //    for (int i = 0; i < newList.Count; i++)
-        //    {
-        //        newList.RemoveAt(4);
-        //    }
-        //    return newList;
-        //}
     }
 }

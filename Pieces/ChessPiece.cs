@@ -10,7 +10,6 @@ namespace chessgame
     {
         internal string name;
  
-
         //internal bool Selected; //TODO: only if we have time
         //internal bool Moved; //TODO: only if we have time(not important)     
         internal ChessPieceType PieceType;
@@ -29,9 +28,6 @@ namespace chessgame
         {
             
         }
-
-      
-       
     }
 }
     

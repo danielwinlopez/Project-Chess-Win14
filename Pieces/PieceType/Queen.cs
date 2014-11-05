@@ -10,6 +10,7 @@ namespace chessgame
     {
         public static Queen CreateQueen(int x, int y)
         {
+            //Each pieces is given it´s specific values in it´s class
             return new Queen() //TODO: GÖRA KLART
             {
                 AttackValue = 7,

@@ -8,9 +8,9 @@ namespace chessgame
 {
     class Bishop : ChessPiece
     {
-
         public static Bishop CreateBishop(int x, int y)
         {
+            //Each pieces is given it´s specific values in it´s class
             return new Bishop() //TODO: GÖRA KLART
             {
                 AttackValue = 4,
@@ -20,8 +20,7 @@ namespace chessgame
                 PieceActionValue = 6,
                 PieceType = ChessPieceType.Bishop,
                 Position = new Position(x,y),
-                GetMove = new Move(),
-                
+                GetMove = new Move()
             };
         }
         /* VET INTE OM DETTA ÄR OPTIMALT (ELLER ENS FUNGERAR ATT ANVÄNDA)

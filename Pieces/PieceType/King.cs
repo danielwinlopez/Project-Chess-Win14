@@ -10,6 +10,7 @@ namespace chessgame
     {
         public static King CreateKing(int x, int y)
         {
+            //Each pieces is given it´s specific values in it´s class
             return new King() //TODO: GÖRA KLART
             {
                 AttackValue = 1,
@@ -20,7 +21,6 @@ namespace chessgame
                 PieceType = ChessPieceType.King,
                 Position = new Position(x,y),
                 GetMove = new Move()
-                
             };
         }
         public override void Draw()

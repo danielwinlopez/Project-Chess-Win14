@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace chessgame
 {
-       public enum Color //enum för lagfärger
+       public enum Color //enum for teamcolor
         {
             White,
             Black

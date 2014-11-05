@@ -10,6 +10,7 @@ namespace chessgame
     {
         public static Knight CreateKnight(int x, int y)
         {
+            //Each pieces is given it´s specific values in it´s class
             return new Knight() //TODO: GÖRA KLART
             {
                 AttackValue = 3,
