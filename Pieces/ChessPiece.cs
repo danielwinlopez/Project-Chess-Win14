@@ -20,7 +20,7 @@ namespace chessgame
         public int PieceValue { get; set; }
         public int PieceActionValue { get; set; }
         public Position Position { get; set; }
-        public Move GetMove { get; set; }
+        public Move GetMove { get; set; }      
         public virtual void Draw()
         {
 

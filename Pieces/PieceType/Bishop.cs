@@ -20,7 +20,8 @@ namespace chessgame
                 PieceActionValue = 6,
                 PieceType = ChessPieceType.Bishop,
                 Position = new Position(x,y),
-                GetMove = new Move()
+                GetMove = new Move(),
+                
             };
         }
         /* VET INTE OM DETTA ÄR OPTIMALT (ELLER ENS FUNGERAR ATT ANVÄNDA)
