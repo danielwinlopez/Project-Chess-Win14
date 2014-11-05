@@ -8,11 +8,21 @@ namespace chessgame
 {
     public class Move
     {
-        public void LegalMoves(int x, int y)
-        {
-           
-        }
+        
+        //public List<Position> PawnMoveList()
+        //{
+        //    List<Position> oldPosition = new List<Position>();
+        //    List<Position> newPosition = oldPosition;
 
-        //The logic for the moves
+        //    foreach (var item in oldPosition)
+        //    {
+        //        for (int y = 0; y < 2; y++)
+        //        {           
+        //            newPosition.Add(new Position(Position, Y+y));
+        //            oldPosition.Clear();
+        //        }
+        //    }
+        //    return newPosition;
+        //}
     }
 }

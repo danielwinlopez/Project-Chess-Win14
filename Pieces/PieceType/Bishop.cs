@@ -10,7 +10,7 @@ namespace chessgame
     {
         public Bishop(Position startPos, ChessPieceType pieceType)
         {
-            StartPosition = startPos;
+            Position = startPos;
             name = pieceType.ToString();
             PieceType = pieceType;
         }
@@ -54,8 +54,8 @@ namespace chessgame
          */
         public override void Draw()
         {
-            int startX = StartPosition.X;
-            int startY = StartPosition.Y;
+            int startX = Position.X;
+            int startY = Position.Y;
 
             Console.SetCursorPosition(startX, startY);
             Console.Write('B');

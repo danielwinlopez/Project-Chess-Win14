@@ -10,19 +10,14 @@ namespace chessgame
     {
         public Pawn(Position startPos,ChessPieceType pieceType )
         {
+            Position = startPos;
             name = pieceType.ToString();
-            StartPosition = startPos;
             PieceType = pieceType;
         }
-
-        public List<Position> possibleMove = new List<Position>(
-        {
-            new Position(0,1)
-        }; 
         public override void Draw()
         {
-            int startX = StartPosition.X;
-            int startY = StartPosition.Y;
+            int startX = Position.X;
+            int startY = Position.Y;
 
             Console.SetCursorPosition(startX, startY);
             Console.Write('P');

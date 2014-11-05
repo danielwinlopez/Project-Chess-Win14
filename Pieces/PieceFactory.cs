@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace chessgame
 {
@@ -13,9 +8,9 @@ namespace chessgame
     {
        // a place where we can construct our list and then call on them from Main
 
-        public List<string> WhitePlayerList()
+        public List<ChessPiece> WhitePlayerList()
         {
-            var pieceListWhite = new List<ChessPiece>
+            return new List<ChessPiece>
             {
                 new Pawn(new Position(1, 0), ChessPieceType.Pawn),
                 new Pawn(new Position(1, 1), ChessPieceType.Pawn),
@@ -34,17 +29,10 @@ namespace chessgame
                 new Queen(new Position(4, 0), ChessPieceType.Queen),
                 new King(new Position(3, 0) , ChessPieceType.King)
             };
-            var startcollection = new List<string>();
-            
-            foreach (var item in pieceListWhite)
-            {               
-                startcollection.Add(item.ToString());             
-            }
-            return startcollection;
         }
-        public List<string> BlackPlayerList()
+        public List<ChessPiece> BlackPlayerList()
         {
-            var pieceListBlack = new List<ChessPiece>
+            return new List<ChessPiece>
             {
                 new Pawn(new Position(7, 0), ChessPieceType.Pawn),
                 new Pawn(new Position(7, 1), ChessPieceType.Pawn),
@@ -63,26 +51,19 @@ namespace chessgame
                 new Queen(new Position(3, 8), ChessPieceType.Queen),
                 new King(new Position(4, 8) , ChessPieceType.King)
             };
-            var startcollection = new List<string>();
-
-            foreach (var item in pieceListBlack)
-            {
-                startcollection.Add(item.ToString());
-            }
-            return startcollection;
         }
-        public List<string> NumberOfPieces(List<string> list)
-        {
-            var number = list.GroupBy(x => x);
-            List<string> newList = new List<string>();
+        //public List<ChessPiece> NumberOfPieces(List<ChessPiece> list)
+        //{
+        //    var number = list.GroupBy(x => x);
+        //    List<ChessPiece> newList = new List<ChessPiece>();
 
-            foreach (var item in number)
-            {
-                string[] stringArray = (item.Key).Split(new char[] {'.'});
-                Console.WriteLine("{0} X {1} ",stringArray[1],  item.Count());                
-            }
-            return newList;
-        }
+        //    foreach (var item in number)
+        //    {
+        //        string[] stringArray = (item.Key).Split(new char[] {'.'});
+        //        Console.WriteLine("{0} X {1} ",stringArray[1],  item.Count());                
+        //    }
+        //    return newList;
+        //}
         //public List<string> KillPiece(List<string> list)
         //{
         //    List<string> newList = new List<string>();

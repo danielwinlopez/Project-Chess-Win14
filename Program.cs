@@ -11,19 +11,30 @@ namespace chessgame
     {
         static void Main(string[] args)
         {
+            Board boards = new Board();
             Position white = new Position(6,6);
             PieceFactory newPiece = new PieceFactory();
             Player wPlayer = new Player(Color.White);
             Player bPlayer = new Player(Color.Black);
-            Board board = new Board(new Position(8,8),8);
-            Position newPosition = new Position(0,0);
 
+            int [,] boardarr = new int[8,8];
+
+            boards.PrintBoard(boardarr);
+            
+            
+            
+
+            //List<string> blackplayer = newPiece.BlackPlayerList(); 
+            //blackplayer.RemoveAt(3);
+            
             Console.WriteLine("BLACK PLAYER: \r\n-------------");
             bPlayer.ShowPieces();
             Console.WriteLine();
             Console.WriteLine("WHITE PLAYER: \r\n-------------");
             wPlayer.ShowPieces();
             Console.WriteLine();
+
+            
 
             Console.ReadLine();
         }

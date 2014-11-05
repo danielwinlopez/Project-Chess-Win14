@@ -1,24 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace chessgame
 {
-    public class Board : Shape
+    public class Board
     {
-        public int Length;
-
-        public Board(Position StartPos, int Length)
+        private PieceFactory pieceFactory;
+        private List<ChessPiece> allaPjasorna;
+        public Board()
         {
-            StartPosition = StartPos;
-            this.Length = Length;
+            pieceFactory = new PieceFactory();
+            allaPjasorna = pieceFactory.WhitePlayerList();
+            PrintWhite();
+
+        }
+        private int[,] chessBoard = new int[8, 8];
+
+        public void PrintWhite()
+        {
+            foreach (var item in allaPjasorna)
+            {
+                Console.WriteLine("X:{0} Y:{1}", 
+                    item.Position.X, 
+                    item.Position.Y);
+            }
         }
 
-        public void Draw()
+        public void PrintBoard(int[,] arr)
         {
- 
+            for (int y = 7; y >= 0; y--)
+            {
+                for (int x = 0; x < 8; x++)
+                {
+                    int num = arr[x, y];
+                    if (num > 0)
+                    {
+                        Console.Write("[" + (char)1 + "]");
+                    }
+                    else
+                    {
+                        Console.Write("[ ]");
+                    }
+                }
+                Console.WriteLine();
+            }
         }
+
     }
+
 }

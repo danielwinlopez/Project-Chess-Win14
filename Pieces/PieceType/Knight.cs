@@ -10,15 +10,14 @@ namespace chessgame
     {
         public Knight(Position startPos, ChessPieceType pieceType)
         {
-            StartPosition = startPos;
+            Position = startPos;
             name = pieceType.ToString();
             PieceType = pieceType;
         }
-
         public override void Draw()
         {
-            int startX = StartPosition.X;
-            int startY = StartPosition.Y;
+            int startX = Position.X;
+            int startY = Position.Y;
 
             Console.SetCursorPosition(startX, startY);
             Console.Write('k');

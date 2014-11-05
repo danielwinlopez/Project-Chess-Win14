@@ -8,13 +8,21 @@ namespace chessgame
 {
     public class Position
     {
+        
         public Position(int x, int y)
         {
             X = x;
             Y = y;
         }
-        public int X;
-        public int Y;
+
+        public int X { get; set; }
+
+        public int Y { get; set; }
+
+        public Position()
+        {
+            
+        }
     }
 }
 

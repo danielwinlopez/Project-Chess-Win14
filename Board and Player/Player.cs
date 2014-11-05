@@ -31,15 +31,15 @@ namespace chessgame
 
             return pieces;
         }
-        public List<string> ShowPieces() // lista till varje lag
+        public List<ChessPiece> ShowPieces() // lista till varje lag
         {
             if (Color.Black == teamColor)
             {
-                return newPieces.NumberOfPieces(newPieces.BlackPlayerList());                
+                return newPieces.BlackPlayerList();                
             }
             else
             {
-                return newPieces.NumberOfPieces(newPieces.WhitePlayerList());
+                return newPieces.WhitePlayerList();
             }
         }
     }
