@@ -7,49 +7,54 @@ namespace chessgame
     public class PieceFactory
     {
        // a place where we can construct our list and then call on them from Main
-
+        public List<ChessPiece> Wplayer { get; set; }
         public List<ChessPiece> WhitePlayerList()
         {
+            //foreach (var chessPiece in Wplayer)
+            //{
+            //    Wplayer.Add(new Pawn(new Position(), ));
+            //}
+            
             return new List<ChessPiece>
             {
-                new Pawn(new Position(1, 0), ChessPieceType.Pawn),
-                new Pawn(new Position(1, 1), ChessPieceType.Pawn),
-                new Pawn(new Position(1, 2), ChessPieceType.Pawn),
-                new Pawn(new Position(1, 3), ChessPieceType.Pawn),
-                new Pawn(new Position(1, 4), ChessPieceType.Pawn),
-                new Pawn(new Position(1, 5), ChessPieceType.Pawn),
-                new Pawn(new Position(1, 6), ChessPieceType.Pawn),
-                new Pawn(new Position(1, 7), ChessPieceType.Pawn),
-                new Bishop(new Position(2, 0), ChessPieceType.Bishop),
-                new Bishop(new Position(5, 0), ChessPieceType.Bishop),
-                new Rook(new Position(0, 0), ChessPieceType.Rook),
-                new Rook(new Position(7, 0), ChessPieceType.Rook),
-                new Knight(new Position(1, 0), ChessPieceType.Knight),
-                new Knight(new Position(6, 0), ChessPieceType.Knight),
-                new Queen(new Position(4, 0), ChessPieceType.Queen),
-                new King(new Position(3, 0) , ChessPieceType.King)
+                Pawn.CreatePawn(1, 0),
+                Pawn.CreatePawn(1, 1),
+                Pawn.CreatePawn(1, 2),
+                Pawn.CreatePawn(1, 3),
+                Pawn.CreatePawn(1, 4),
+                Pawn.CreatePawn(1, 5),
+                Pawn.CreatePawn(1, 6),
+                Pawn.CreatePawn(1, 7),
+                Bishop.CreateBishop(2, 0),
+                Bishop.CreateBishop(5, 0),
+                Rook.CreateRook(0, 0),
+                Rook.CreateRook(7, 0),
+                Knight.CreateKnight(1, 0),
+                Knight.CreateKnight(6, 0),
+                Queen.CreateQueen(4, 0),
+                King.CreateKing(3, 0)                
             };
         }
         public List<ChessPiece> BlackPlayerList()
         {
             return new List<ChessPiece>
             {
-                new Pawn(new Position(7, 0), ChessPieceType.Pawn),
-                new Pawn(new Position(7, 1), ChessPieceType.Pawn),
-                new Pawn(new Position(7, 2), ChessPieceType.Pawn),
-                new Pawn(new Position(7, 3), ChessPieceType.Pawn),
-                new Pawn(new Position(7, 4), ChessPieceType.Pawn),
-                new Pawn(new Position(7, 5), ChessPieceType.Pawn),
-                new Pawn(new Position(7, 6), ChessPieceType.Pawn),
-                new Pawn(new Position(7, 7), ChessPieceType.Pawn),
-                new Bishop(new Position(2, 8), ChessPieceType.Bishop),
-                new Bishop(new Position(5, 8), ChessPieceType.Bishop),
-                new Rook(new Position(0, 8), ChessPieceType.Rook),
-                new Rook(new Position(7, 8), ChessPieceType.Rook),
-                new Knight(new Position(1, 8), ChessPieceType.Knight),
-                new Knight(new Position(6, 8), ChessPieceType.Knight),
-                new Queen(new Position(3, 8), ChessPieceType.Queen),
-                new King(new Position(4, 8) , ChessPieceType.King)
+                Pawn.CreatePawn(7, 0),
+                Pawn.CreatePawn(7, 1),
+                Pawn.CreatePawn(7, 2),
+                Pawn.CreatePawn(7, 3),
+                Pawn.CreatePawn(7, 4),
+                Pawn.CreatePawn(7, 5),
+                Pawn.CreatePawn(7, 6),
+                Pawn.CreatePawn(7, 7), 
+                Bishop.CreateBishop(2, 8),
+                Bishop.CreateBishop(5, 8),
+                Rook.CreateRook(0, 8),
+                Rook.CreateRook(7, 8),
+                Knight.CreateKnight(1, 8),
+                Knight.CreateKnight(6, 8),
+                Queen.CreateQueen(3, 8),
+                King.CreateKing(4, 8)                    
             };
         }
         //public List<ChessPiece> NumberOfPieces(List<ChessPiece> list)

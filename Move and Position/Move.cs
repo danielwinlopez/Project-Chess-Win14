@@ -8,7 +8,7 @@ namespace chessgame
 {
     public class Move
     {
-        
+
         //public List<Position> PawnMoveList()
         //{
         //    List<Position> oldPosition = new List<Position>();
@@ -17,8 +17,8 @@ namespace chessgame
         //    foreach (var item in oldPosition)
         //    {
         //        for (int y = 0; y < 2; y++)
-        //        {           
-        //            newPosition.Add(new Position(Position, Y+y));
+        //        {
+        //            newPosition.Add(new Position(X, Y + y));
         //            oldPosition.Clear();
         //        }
         //    }

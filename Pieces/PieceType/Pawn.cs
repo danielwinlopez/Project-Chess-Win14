@@ -8,12 +8,7 @@ namespace chessgame
 {
     public class Pawn : ChessPiece
     {
-        public Pawn(Position startPos,ChessPieceType pieceType )
-        {
-            Position = startPos;
-            name = pieceType.ToString();
-            PieceType = pieceType;
-        }
+
         public override void Draw()
         {
             int startX = Position.X;
@@ -21,6 +16,21 @@ namespace chessgame
 
             Console.SetCursorPosition(startX, startY);
             Console.Write('P');
+        }
+
+        public static Pawn CreatePawn(int x, int y)
+        {
+            return new Pawn() //TODO: GÖRA KLART
+            {
+                AttackValue = 1,
+                DefenceValue = 2,
+                PieceValue = 10,
+                name = ChessPieceType.Pawn.ToString(),
+                PieceActionValue = 10,
+                PieceType = ChessPieceType.Pawn,
+                Position = new Position(x, y),
+                GetMove = new Move()
+            };
         }
     }
 }

@@ -16,8 +16,9 @@ namespace chessgame
             PieceFactory newPiece = new PieceFactory();
             Player wPlayer = new Player(Color.White);
             Player bPlayer = new Player(Color.Black);
+             int [,] boardarr = new int[8,8];
 
-            int [,] boardarr = new int[8,8];
+          
 
             boards.PrintBoard(boardarr);
             

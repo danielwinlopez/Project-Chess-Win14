@@ -8,11 +8,19 @@ namespace chessgame
 {
     class Knight : ChessPiece
     {
-        public Knight(Position startPos, ChessPieceType pieceType)
+        public static Knight CreateKnight(int x, int y)
         {
-            Position = startPos;
-            name = pieceType.ToString();
-            PieceType = pieceType;
+            return new Knight() //TODO: GÖRA KLART
+            {
+                AttackValue = 3,
+                DefenceValue = 6,
+                PieceValue = 25,
+                name = ChessPieceType.Bishop.ToString(),
+                PieceActionValue = 8,
+                PieceType = ChessPieceType.Bishop,
+                Position = new Position(x, y),
+                GetMove = new Move()
+            };
         }
         public override void Draw()
         {

@@ -10,7 +10,7 @@ namespace chessgame
     {
         private readonly Color teamColor;
         List<string> pieces = new List<string>();
-        private string name;
+        public string name { get; set; }
         PieceFactory newPieces = new PieceFactory();
 
         public byte PiecesAmount { get; set; }

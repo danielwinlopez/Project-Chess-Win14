@@ -8,12 +8,20 @@ namespace chessgame
 {
     class Rook : ChessPiece
     {
-        
-        public Rook(Position startPos, ChessPieceType pieceType)
+
+        public static Rook CreateRook(int x, int y)
         {
-            Position = startPos;
-            name = pieceType.ToString();
-            PieceType = pieceType;
+            return new Rook() //TODO: GÖRA KLART
+            {
+                AttackValue = 5,
+                DefenceValue = 10,
+                PieceValue = 50,
+                name = ChessPieceType.Rook.ToString(),
+                PieceActionValue = 4,
+                PieceType = ChessPieceType.Rook,
+                Position = new Position(x, y),
+                GetMove = new Move()
+            };
         }
         public override void Draw()
         {
