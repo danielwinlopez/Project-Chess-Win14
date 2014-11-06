@@ -12,9 +12,7 @@ namespace chessgame
         List<string> pieces = new List<string>();
         public string name { get; set; }
         PieceFactory newPieces = new PieceFactory();
-
         public byte PiecesAmount { get; set; }
-
         public Player(Color color)
         {
             teamColor = color;
@@ -28,7 +26,7 @@ namespace chessgame
             }
             return pieces;
         }
-        public List<ChessPiece> ShowPieces() // lista till varje lag
+        public List<ChessPiece> ShowPieces() // White and black player gets a list of pieces according to their color
         {
             if (Color.Black == teamColor)
             {

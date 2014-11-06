@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace chessgame
 {
-    public enum ChessPieceType // enum för speltyper
+    public enum ChessPieceType // enum ´for gamepieces
     {
         King,
         Queen,

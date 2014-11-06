@@ -8,19 +8,10 @@ namespace chessgame
 {
     public class Pawn : ChessPiece
     {
-
-        public override void Draw()
-        {
-            int startX = Position.X;
-            int startY = Position.Y;
-
-            Console.SetCursorPosition(startX, startY);
-            Console.Write('P');
-        }
-
         public static Pawn CreatePawn(int x, int y)
         {
-            return new Pawn()
+            //Each pieces is given it´s specific values in it´s class
+            return new Pawn() //TODO: GÖRA KLART
             {
                 AttackValue = 1,
                 DefenceValue = 2,
@@ -31,6 +22,14 @@ namespace chessgame
                 Position = new Position(x, y),
                 GetMove = new Move()
             };
+        }
+        public override void Draw()
+        {
+            int startX = Position.X;
+            int startY = Position.Y;
+
+            Console.SetCursorPosition(startX, startY);
+            Console.Write('P');
         }
     }
 }

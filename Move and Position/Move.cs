@@ -8,7 +8,6 @@ namespace chessgame
 {
     public class Move
     {
-
         //public List<Position> PawnMoveList()
         //{
         //    List<Position> oldPosition = new List<Position>();

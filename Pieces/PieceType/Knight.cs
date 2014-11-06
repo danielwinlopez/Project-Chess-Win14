@@ -10,7 +10,8 @@ namespace chessgame
     {
         public static Knight CreateKnight(int x, int y)
         {
-            return new Knight()
+            //Each pieces is given it´s specific values in it´s class
+            return new Knight() //TODO: GÖRA KLART
             {
                 AttackValue = 3,
                 DefenceValue = 6,
@@ -22,10 +23,8 @@ namespace chessgame
                 GetMove = new Move()
             };
         }
-        
         public override void Draw()
         {
-            
             int startX = Position.X;
             int startY = Position.Y;
 
