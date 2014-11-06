@@ -8,7 +8,8 @@ namespace chessgame
 {
     public class Move
     {
-        public Position GetMove { get; set; }
+        public Position Position { get; set; }
+
 
 
         public List<Position> QueenMove()
@@ -31,8 +32,8 @@ namespace chessgame
                 
                 for (int i = 0; i < antalSteg; i++)
                 {
-                    var stegX = item.X + GetMove.X;
-                    var stegY = item.Y + GetMove.Y;
+                    var stegX = item.X + Position.X;
+                    var stegY = item.Y + Position.Y;
                     newList.Add(new Position(stegX,stegY));
                 }
 
