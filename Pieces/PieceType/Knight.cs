@@ -20,7 +20,7 @@ namespace chessgame
                 PieceActionValue = 8,
                 PieceType = ChessPieceType.Bishop,
                 Position = new Position(x, y),
-                GetMove = new Move()
+                GetMove = new Move().KnightMove()
             };
         }
         public override void Draw()
