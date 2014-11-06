@@ -20,7 +20,7 @@ namespace chessgame
 
         public static Pawn CreatePawn(int x, int y)
         {
-            return new Pawn() //TODO: GÖRA KLART
+            return new Pawn()
             {
                 AttackValue = 1,
                 DefenceValue = 2,

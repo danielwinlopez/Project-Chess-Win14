@@ -10,7 +10,7 @@ namespace chessgame
     {
         public static King CreateKing(int x, int y)
         {
-            return new King() //TODO: GÖRA KLART
+            return new King() 
             {
                 AttackValue = 1,
                 DefenceValue = 1,

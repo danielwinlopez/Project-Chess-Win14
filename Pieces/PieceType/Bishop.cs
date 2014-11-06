@@ -11,7 +11,7 @@ namespace chessgame
 
         public static Bishop CreateBishop(int x, int y)
         {
-            return new Bishop() //TODO: GÖRA KLART
+            return new Bishop() 
             {
                 AttackValue = 4,
                 DefenceValue = 8,

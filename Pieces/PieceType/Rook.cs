@@ -11,7 +11,7 @@ namespace chessgame
 
         public static Rook CreateRook(int x, int y)
         {
-            return new Rook() //TODO: GÖRA KLART
+            return new Rook() 
             {
                 AttackValue = 5,
                 DefenceValue = 10,

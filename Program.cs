@@ -21,8 +21,8 @@ namespace chessgame
           
 
             boards.PrintBoard(boardarr);
-            
-            
+
+           
             
 
             //List<string> blackplayer = newPiece.BlackPlayerList(); 
