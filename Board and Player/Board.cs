@@ -9,6 +9,7 @@ namespace chessgame
 {
     public class Board
     {
+        
         private PieceFactory pieceFactory;
         private List<ChessPiece> allaPjasorna = new List<ChessPiece>(); 
         public Board()

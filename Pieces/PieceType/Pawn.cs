@@ -20,7 +20,8 @@ namespace chessgame
                 PieceActionValue = 10,
                 PieceType = ChessPieceType.Pawn,
                 Position = new Position(x, y),
-                GetMove = new Move().PawnMove()
+                GetMove = new Move(new Position(x,y)).PawnMove()
+                
             };
         }
         public override void Draw()

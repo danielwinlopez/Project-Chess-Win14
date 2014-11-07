@@ -18,8 +18,9 @@ namespace chessgame
             Player bPlayer = new Player(Color.Black);
             int [,] boardarr = new int[8,8];
 
-          
-
+            newPiece.BlackPlayerList();
+            newPiece.WhitePlayerList();
+            
             boards.PrintBoard(boardarr);
             
             

@@ -20,7 +20,7 @@ namespace chessgame
                 PieceActionValue = 2,
                 PieceType = ChessPieceType.Queen,
                 Position = new Position(x, y),
-                GetMove = new Move().QueenMove()
+                GetMove = new Move(new Position(x, y)).QueenMove()
             };
         }
         public override void Draw()

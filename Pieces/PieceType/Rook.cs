@@ -21,7 +21,7 @@ namespace chessgame
                 PieceActionValue = 4,
                 PieceType = ChessPieceType.Rook,
                 Position = new Position(x, y),
-                GetMove = new Move().RookMove()
+                GetMove = new Move(new Position(x, y)).RookMove()
             };
         }
         public override void Draw()

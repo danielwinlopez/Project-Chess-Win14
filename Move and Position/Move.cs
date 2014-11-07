@@ -8,8 +8,13 @@ namespace chessgame
 {
     public class Move
     {
-        public Position GetMove { get; set; }
 
+        private Position currentPosition;
+
+        public Move(Position position)
+        {
+            currentPosition = position;
+        }
         public List<Position> QueenMove()
         {
             List<Position> moveList = new List<Position>();
@@ -30,8 +35,8 @@ namespace chessgame
 
                 for (int i = 0; i < antalSteg; i++)
                 {
-                    var stegX = item.X + GetMove.X;
-                    var stegY = item.Y + GetMove.Y;
+                    var stegX = item.X + currentPosition.X;
+                    var stegY = item.Y + currentPosition.Y;
                     newList.Add(new Position(stegX, stegY));
                 }
             }
@@ -57,8 +62,8 @@ namespace chessgame
 
                 for (int i = 0; i < antalSteg; i++)
                 {
-                    var stegX = item.X + GetMove.X;
-                    var stegY = item.Y + GetMove.Y;
+                    var stegX = item.X + currentPosition.X;
+                    var stegY = item.Y + currentPosition.Y;
                     newList.Add(new Position(stegX, stegY));
                 }
             }
@@ -80,8 +85,8 @@ namespace chessgame
 
                 for (int i = 0; i < antalSteg; i++)
                 {
-                    var stegX = item.X + GetMove.X;
-                    var stegY = item.Y + GetMove.Y;
+                    var stegX = item.X + currentPosition.X;
+                    var stegY = item.Y + currentPosition.Y;
                     newList.Add(new Position(stegX, stegY));
                 }
             }
@@ -105,8 +110,8 @@ namespace chessgame
 
                 for (int i = 0; i < antalSteg; i++)
                 {
-                    var stegX = item.X + GetMove.X;
-                    var stegY = item.Y + GetMove.Y;
+                    var stegX = item.X + currentPosition.X;
+                    var stegY = item.Y + currentPosition.Y;
                     newList.Add(new Position(stegX, stegY));
                 }
             }
@@ -118,21 +123,22 @@ namespace chessgame
 
 
             moveList.Add(new Position(0, 1));  //Forward
-
-
+    
+            List<Position> newList = new List<Position>();
             int antalSteg = 1;
             foreach (var item in moveList)
             {
-                List<Position> newList = new List<Position>();
+                
 
                 for (int i = 0; i < antalSteg; i++)
                 {
-                    var stegX = item.X + GetMove.X;
-                    var stegY = item.Y + GetMove.Y;
+                    var stegX = item.X + currentPosition.X;
+                    var stegY = item.Y + currentPosition.Y;
                     newList.Add(new Position(stegX, stegY));
                 }
+                
             }
-            return moveList;
+            return newList;
         }
         public List<Position> KnightMove()
         {
@@ -154,8 +160,8 @@ namespace chessgame
 
                 for (int i = 0; i < antalSteg; i++)
                 {
-                    var stegX = item.X + GetMove.X;
-                    var stegY = item.Y + GetMove.Y;
+                    var stegX = item.X + currentPosition.X;
+                    var stegY = item.Y + currentPosition.Y;
                     newList.Add(new Position(stegX, stegY));
                 }
             }
