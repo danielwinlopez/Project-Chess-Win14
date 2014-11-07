@@ -91,12 +91,10 @@ namespace chessgame
         {
             List<Position> moveList = new List<Position>();
 
-
             moveList.Add(new Position(0, 1));  //Forward
             moveList.Add(new Position(1, 0));  //Right
             moveList.Add(new Position(0, -1)); //Backward
             moveList.Add(new Position(-1, 0)); //Left
-
 
             int antalSteg = 7;
             foreach (var item in moveList)
@@ -115,11 +113,9 @@ namespace chessgame
         public List<Position> PawnMove()
         {
             List<Position> moveList = new List<Position>();
-
-
+            
             moveList.Add(new Position(0, 1));  //Forward
-
-
+            
             int antalSteg = 1;
             foreach (var item in moveList)
             {

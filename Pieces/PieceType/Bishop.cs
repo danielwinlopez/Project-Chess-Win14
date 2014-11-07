@@ -8,10 +8,9 @@ namespace chessgame
 {
     class Bishop : ChessPiece
     {
-        public static Bishop CreateBishop(int x, int y)
+        public static Bishop CreateBishop(int x, int y)//Each pieces is given it´s specific values in it´s class
         {
-            //Each pieces is given it´s specific values in it´s class
-            return new Bishop() //TODO: GÖRA KLART
+            return new Bishop()
             {
                 AttackValue = 4,
                 DefenceValue = 8,
@@ -23,44 +22,6 @@ namespace chessgame
                 GetMove = new Move().BishopMove()
             };
         }
-        /* VET INTE OM DETTA ÄR OPTIMALT (ELLER ENS FUNGERAR ATT ANVÄNDA)
-        public List<Position> possibleMove = new List<Position>
-        {
-            new Position(1, 1),
-            new Position(2, 2),
-            new Position(3, 3),
-            new Position(4, 4),
-            new Position(5, 5),
-            new Position(6, 6),
-            new Position(7, 7),
-            new Position(8, 8),
-            new Position(1, -1),
-            new Position(2, -2),
-            new Position(3, -3),
-            new Position(4, -4),
-            new Position(5, -5),
-            new Position(6, -6),
-            new Position(7, -7),
-            new Position(8, -8),
-            new Position(-1, -1),
-            new Position(-2, -2),
-            new Position(-3, -3),
-            new Position(-4, -4),
-            new Position(-5, -5),
-            new Position(-6, -6),
-            new Position(-7, -7),
-            new Position(-8, -8),
-            new Position(-1, -1),
-            new Position(-2, -2),
-            new Position(-3, -3),
-            new Position(-4, -4),
-            new Position(-5, -5),
-            new Position(-6, -6),
-            new Position(-7, -7),
-            new Position(-8, -8),
-        };
-
-         */
         public override void Draw()
         {
             int startX = Position.X;

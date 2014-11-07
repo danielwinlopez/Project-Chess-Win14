@@ -18,12 +18,8 @@ namespace chessgame
             Player bPlayer = new Player(Color.Black);
             int [,] boardarr = new int[8,8];
 
-          
-
             boards.PrintBoard(boardarr);
             
-            
-
             //List<string> blackplayer = newPiece.BlackPlayerList(); 
             //blackplayer.RemoveAt(3);
             
@@ -34,7 +30,6 @@ namespace chessgame
             wPlayer.ShowPieces();
             Console.WriteLine();
 
-            
             Console.ReadLine();
         }
     }
