@@ -9,10 +9,9 @@ namespace chessgame
     class Rook : ChessPiece
     {
 
-        public static Rook CreateRook(int x, int y)
+        public static Rook CreateRook(int x, int y)//Each pieces is given it´s specific values in it´s class
         {
-            //Each pieces is given it´s specific values in it´s class
-            return new Rook() //TODO: GÖRA KLART
+            return new Rook()
             {
                 AttackValue = 5,
                 DefenceValue = 10,

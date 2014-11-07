@@ -8,10 +8,9 @@ namespace chessgame
 {
     class Knight : ChessPiece
     {
-        public static Knight CreateKnight(int x, int y)
+        public static Knight CreateKnight(int x, int y)//Each pieces is given it´s specific values in it´s class
         {
-            //Each pieces is given it´s specific values in it´s class
-            return new Knight() //TODO: GÖRA KLART
+            return new Knight()
             {
                 AttackValue = 3,
                 DefenceValue = 6,

@@ -8,10 +8,9 @@ namespace chessgame
 {
     public class Pawn : ChessPiece
     {
-        public static Pawn CreatePawn(int x, int y)
+        public static Pawn CreatePawn(int x, int y)//Each pieces is given it´s specific values in it´s class
         {
-            //Each pieces is given it´s specific values in it´s class
-            return new Pawn() //TODO: GÖRA KLART
+            return new Pawn()
             {
                 AttackValue = 1,
                 DefenceValue = 2,

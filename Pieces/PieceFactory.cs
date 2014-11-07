@@ -8,9 +8,8 @@ namespace chessgame
     {
        // a place where we can construct our list´s and then call on them from Main
         public List<ChessPiece> Wplayer { get; set; }
-        public List<ChessPiece> WhitePlayerList()
+        public List<ChessPiece> WhitePlayerList()// Whiteplayer´s list is made here with hardcoded startingpostitions
         {
-            // Whiteplayer´s list is made here
             return new List<ChessPiece>
             {
                 Pawn.CreatePawn(0,1),
@@ -31,9 +30,8 @@ namespace chessgame
                 King.CreateKing(3, 0)                
             };
         }
-        public List<ChessPiece> BlackPlayerList()
+        public List<ChessPiece> BlackPlayerList()// Blackplayer´s list is made here with hardcoded startingpostitions
         {
-            // Blackplayer´s list is made here
             return new List<ChessPiece>
             {
                 Pawn.CreatePawn( 0,7),

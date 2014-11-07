@@ -11,12 +11,12 @@ namespace chessgame
     {
         
         private PieceFactory pieceFactory;
-        private List<ChessPiece> allaPjasorna = new List<ChessPiece>(); 
+        private List<ChessPiece> everyPieces = new List<ChessPiece>(); 
         public Board()
         {
             pieceFactory = new PieceFactory();
-            allaPjasorna.AddRange(pieceFactory.WhitePlayerList());
-            allaPjasorna.AddRange(pieceFactory.BlackPlayerList());
+            everyPieces.AddRange(pieceFactory.WhitePlayerList());
+            everyPieces.AddRange(pieceFactory.BlackPlayerList());
 
             PrintAll();
         }
@@ -24,7 +24,7 @@ namespace chessgame
 
         public void PrintAll()
         {
-            foreach (var item in allaPjasorna)
+            foreach (var item in everyPieces)
             {
                 Console.WriteLine("X:{0} Y:{1}", 
                     item.Position.X, 
